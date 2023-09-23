@@ -14,7 +14,7 @@ library(micropan)
 
 path <- "C:/minha_pasta_com_os_arquivos_baixados_do_instaloader/"
 
-path <- "D:/instagram/labhdufba"
+path <- "./data/cienciassociais_pucrio/"
 
 ## Carrega lista de nomes dos txt
 jsonFiles <- list.files(path, pattern = "UTC.json.xz", recursive = TRUE)
@@ -42,7 +42,7 @@ leitor <- function(file, numFile) {
   
   ### Extrai a data e a converte
   data = file |> 
-    stringr::str_split_i("/", 3) |> 
+    #stringr::str_split_i("/", 3) |> 
     stringr::str_remove("_UTC\\.json.xz") |> 
     lubridate::ymd_hms()
   
@@ -124,7 +124,7 @@ postagens <- jsonFiles |>
   purrr::imap(leitor) |> 
   purrr::list_rbind()
 
-## Substitui certos caracteres que afetam detecção no Elastic
+## Substitui certos caracteres
 postagens <- postagens |> 
   dplyr::mutate(across(
     .cols = where(is.character),
@@ -139,8 +139,8 @@ postagens <- postagens |>
   dplyr::mutate(texto = stringr::str_squish(texto))
 
 ## Salva o banco de dados
-saveRDS(postagens, "results/postagens.RDS")
-write.table(postagens, row.names = FALSE, 'results/postagens.csv', sep = ";")
+saveRDS(postagens, "./resultados/cienciassociais_pucrio.RDS")
+write.table(postagens, row.names = FALSE, './resultados/postagens.csv', sep = ";")
 
 ## Opcional: mandar os dados para o Google Sheets
 
@@ -154,7 +154,7 @@ googlesheets4::gs4_auth()
 ### - Substitua "Sample R" pelo título que preferir 
 ### - (eu colocaria o nome do perfil coletados)
 
-(ss <- googlesheets4::gs4_create("Sample R", sheets = postagens))
+(ss <- googlesheets4::gs4_create("cienciassociais_pucrio", sheets = postagens))
 
 
 
