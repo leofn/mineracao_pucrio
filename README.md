@@ -16,12 +16,6 @@ Entender o que é mineração de dados nas ciências humanas e sociais; seu sign
 
 - Repositório para coletar dados do Instagram (fiz um fork e traduzi para pt-br)
 
-[INSTALOADER](https://github.com/leofn/instaloader)
-
-- acesse o prompt do seu computador(cmd) e digite(OBS: o git deverá estar previamente instalado):
-
-**git clone https://github.com/leofn/instaloader.git**
-
 # Pré-requisitos
 
 - Git e Github básico [aprenda aqui](https://www.youtube.com/watch?v=I9Atm-25fXE)
@@ -30,3 +24,9 @@ Entender o que é mineração de dados nas ciências humanas e sociais; seu sign
 
 - R intermediário [aprenda aqui](https://materiais-estudo-r.netlify.app/)
 
+
+# Instalação do [INSTALOADER](https://github.com/leofn/instaloader)
+
+- acesse o prompt do seu computador(cmd) e digite(OBS: o git deverá estar previamente instalado):
+
+**git clone https://github.com/leofn/instaloader.git**
