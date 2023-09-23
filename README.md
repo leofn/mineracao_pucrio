@@ -18,12 +18,9 @@ Entender o que é mineração de dados nas ciências humanas e sociais; seu sign
 
 [INSTALOADER](https://github.com/leofn/instaloader)
 
-- acesse seu prompt e faça o seguinte
+- acesse o prompt do seu computador(cmd) e digite(OBS: o git deverá estar previamente instalado):
 
-´´´{r}
-$ git clone https://github.com/leofn/instaloader.git
-
-´´´
+**git clone https://github.com/leofn/instaloader.git**
 
 # Pré-requisitos
 
