@@ -8,8 +8,13 @@ library(purrr)
 library(stringr)
 library(micropan)
 
-## Define path para os arquivos
-path <- "D:/instagram/mentiratempreco"
+## Define PATH para os arquivos
+## O que é PATH? É o endereço/caminho para a pasta onde estão os arquivos
+## que foram baixados via instaloder
+
+path <- "C:/minha_pasta_com_os_arquivos_baixados_do_instaloader/"
+
+path <- "D:/instagram/labhdufba"
 
 ## Carrega lista de nomes dos txt
 jsonFiles <- list.files(path, pattern = "UTC.json.xz", recursive = TRUE)
@@ -136,3 +141,36 @@ postagens <- postagens |>
 ## Salva o banco de dados
 saveRDS(postagens, "results/postagens.RDS")
 write.table(postagens, row.names = FALSE, 'results/postagens.csv', sep = ";")
+
+## Opcional: mandar os dados para o Google Sheets
+
+#install.packages("googlesheets4")
+
+### Autorizar o uso de sua conta google pelo R 
+googlesheets4::gs4_auth()
+
+### Criar uma planilha Google com os dados
+
+### - Substitua "Sample R" pelo título que preferir 
+### - (eu colocaria o nome do perfil coletados)
+
+(ss <- googlesheets4::gs4_create("Sample R", sheets = postagens))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
