@@ -1,3 +1,8 @@
+###############################################################
+### Autor deste ETL: https://github.com/IcaroBernardes   #####
+### Sigam ele no github e twitter!                       #####
+##############################################################
+
 # 0. Setup inicial ##############
 ## Carrega as bibliotecas
 library(cli)
