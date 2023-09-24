@@ -14,6 +14,10 @@ Entender o que é mineração de dados nas ciências humanas e sociais; seu sign
 
 [AGGARWAL - Data Mining. Springer, 2015](https://doc.lagout.org/Others/Data%20Mining/Data%20Mining_%20The%20Textbook%20%5BAggarwal%202015-04-14%5D.pdf)
 
+[JUNGHERR - Analyzing Political Communication with Digital Trace Data: The Role of Twitter Messages in Social Science Research](http://library.lol/main/BBAB3DEC198CF14E85638E8D2937D831)
+
+[SALGANIK, Matthew J. Bit by Bit - Princeton University Press, 2019](http://library.lol/main/2AA1F65188400EBB20318EADEF9606E9)
+
 - Repositório para coletar dados do Instagram (fiz um fork e traduzi para pt-br)
 
 # Pré-requisitos
